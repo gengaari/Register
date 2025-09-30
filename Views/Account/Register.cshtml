@@ -1,0 +1,76 @@
+﻿
+@model WebApplication4.Models.RegisterViewModel
+
+<h2>Регистрация</h2>
+
+<form asp-action="Register" method="post">
+    <div>
+        <label asp-for="Username"></label>
+        <input asp-for="Username" />
+        <span asp-validation-for="Username"></span>
+    </div>
+
+    <div>
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" />
+        <span asp-validation-for="FirstName"></span>
+    </div>
+
+    <div>
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" />
+        <span asp-validation-for="LastName"></span>
+    </div>
+
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+
+    <div>
+        <label asp-for="ConfirmPassword"></label>
+        <input asp-for="ConfirmPassword" type="password" />
+        <span asp-validation-for="ConfirmPassword"></span>
+    </div>
+
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+
+    <div>
+        <label asp-for="PhoneNumber"></label>
+        <input asp-for="PhoneNumber" />
+        <span asp-validation-for="PhoneNumber"></span>
+    </div>
+
+    <div>
+        <label asp-for="Age"></label>
+        <input asp-for="Age" type="number" />
+        <span asp-validation-for="Age"></span>
+    </div>
+
+    <div>
+        <label asp-for="Website"></label>
+        <input asp-for="Website" />
+        <span asp-validation-for="Website"></span>
+    </div>
+
+    <div>
+        <label asp-for="CreditCardNumber"></label>
+        <input asp-for="CreditCardNumber" />
+        <span asp-validation-for="CreditCardNumber"></span>
+    </div>
+
+    <div>
+        <input asp-for="TermsOfService" type="checkbox" /> Я принимаю условия использования
+    </div>
+
+    <button type="submit">Зарегистрироваться</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
